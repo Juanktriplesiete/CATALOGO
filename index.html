@@ -30,7 +30,7 @@
       color: #fff;
       font-family: Arial, sans-serif;
       font-size: 18px;
-      background-color: transparent; /* transparente para que se vea el fondo animado */
+      background-color: transparent;
     }
 
     header {
@@ -69,7 +69,8 @@
 
     .producto img {
       width: 100%;
-      height: auto;
+      height: 200px;
+      object-fit: cover;
       border-radius: 5px;
     }
 
@@ -155,7 +156,7 @@
 </head>
 <body>
 
-  <!-- Fondo GIF (descomenta solo uno de los dos) -->
+  <!-- Fondo GIF -->
   <div id="fondo-gif"></div>
 
   <!-- Fondo video (opcional) -->
@@ -166,19 +167,19 @@
   </header>
 
   <div class="productos">
-    <!-- Productos del 1 al 12 -->
     <div class="producto"><img src="img/poncho1.jpg" alt="Producto 1"><div class="nombre">Producto estrella</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Producto estrella - $25.000')">Añadir al carrito</button></div>
     <div class="producto"><img src="img/poncho2.jpg" alt="Producto 2"><div class="nombre">Calidad garantizada</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Calidad garantizada - $25.000')">Añadir al carrito</button></div>
     <div class="producto"><img src="img/poncho3.jpg" alt="Producto 3"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
-    <div class="producto"><img src="img/poncho4.jpg" alt="Producto 4"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
-    <div class="producto"><img src="img/poncho5.jpg" alt="Producto 5"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
-    <div class="producto"><img src="img/poncho6.jpg" alt="Producto 6"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
-    <div class="producto"><img src="img/poncho7.jpg" alt="Producto 7"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
-    <div class="producto"><img src="img/poncho8.jpg" alt="Producto 8"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
-    <div class="producto"><img src="img/poncho9.jpg" alt="Producto 9"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
-    <div class="producto"><img src="img/poncho10.jpg" alt="Producto 10"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
-    <div class="producto"><img src="img/poncho11.jpg" alt="Producto 11"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
-    <div class="producto"><img src="img/poncho12.jpg" alt="Producto 12"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho4.jpg" alt="Producto 3"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho5.jpg" alt="Producto 3"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho6.jpg" alt="Producto 3"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho7.jpg" alt="Producto 3"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho8.jpg" alt="Producto 3"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho9.jpg" alt="Producto 3"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho10.jpg" alt="Producto 3"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho11.jpg" alt="Producto 3"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho12.jpg" alt="Producto 3"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+
   </div>
 
   <div id="carrito">
@@ -189,22 +190,21 @@
   <button id="btn-whatsapp" onclick="enviarPorWhatsApp()">Enviar pedido por WhatsApp</button>
 
   <script>
-    // Cambia esta variable a la ruta de tu GIF o video (solo uno)
-    const fondoRuta = "img/fondo.gif"; // ejemplo: 'img/fondo-animado.gif' o 'videos/fondo.mp4'
-    const esVideo = false; // Cambia a true si es video
+    // Ruta de fondo (GIF o Video)
+    const fondoRuta = "img/fondo.gif"; // Cambia a tu ruta real
+    const esVideo = false; // true si es un video
 
     if (esVideo) {
-      // Mostrar video de fondo
       const videoFondo = document.getElementById("fondo-video");
       videoFondo.src = fondoRuta;
       videoFondo.style.display = "block";
       document.getElementById("fondo-gif").style.display = "none";
     } else {
-      // Mostrar gif como fondo
       const divFondo = document.getElementById("fondo-gif");
       divFondo.style.backgroundImage = `url('${fondoRuta}')`;
       divFondo.style.display = "block";
-      document.getElementById("fondo-video").style.display = "none";
+      const video = document.getElementById("fondo-video");
+      if (video) video.style.display = "none";
     }
 
     let carrito = [];
@@ -223,7 +223,6 @@
     function actualizarResumen() {
       const lista = document.getElementById("lista-carrito");
       lista.innerHTML = "";
-
       carrito.forEach((item, index) => {
         const li = document.createElement("li");
         li.innerHTML = `${index + 1}. ${item} <button class="eliminar" onclick="eliminarDelCarrito(${index})">🗑️</button>`;
@@ -236,7 +235,6 @@
         alert("El carrito está vacío.");
         return;
       }
-
       const mensaje = encodeURIComponent("Hola, quiero hacer el siguiente pedido:\n\n" + carrito.join("\n"));
       const numero = "573018989559";
       const url = `https://wa.me/${numero}?text=${mensaje}`;
