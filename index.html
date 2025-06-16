@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo de Productos</title>
+  <style>
+    /* Fondo GIF/Imagen */
+    #fondo-gif {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: no-repeat center center / cover;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Fondo Video */
+    #fondo-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    body {
+      margin: 0; padding: 0;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      background-color: transparent; /* transparente para que se vea el fondo animado */
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 10px;
+      background-color: rgba(17,17,17,0.8);
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      background-color: rgba(26, 26, 26, 0.85);
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    .producto {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 0 10px #333;
+      transition: transform 0.2s;
+    }
+
+    .producto:hover {
+      transform: scale(1.03);
+    }
+
+    .producto img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .nombre {
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+
+    .precio {
+      color: #00ff00;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .btn {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #00ff00;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #carrito {
+      background-color: rgba(17,17,17,0.8);
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    #carrito h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    #carrito ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    #carrito li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .eliminar {
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    #btn-whatsapp {
+      display: block;
+      margin: 30px auto;
+      padding: 15px 20px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+      }
+      .nombre {
+        font-size: 18px;
+      }
+      .precio {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fondo GIF (descomenta solo uno de los dos) -->
+  <div id="fondo-gif"></div>
+
+  <!-- Fondo video (opcional) -->
+  <!-- <video id="fondo-video" autoplay muted loop></video> -->
+
+  <header>
+    <h1>CATÁLOGO DE PRODUCTOS</h1>
+  </header>
+
+  <div class="productos">
+    <!-- Productos del 1 al 12 -->
+    <div class="producto"><img src="img/poncho1.jpg" alt="Producto 1"><div class="nombre">Producto estrella</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Producto estrella - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho2.jpg" alt="Producto 2"><div class="nombre">Calidad garantizada</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Calidad garantizada - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho3.jpg" alt="Producto 3"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho4.jpg" alt="Producto 4"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho5.jpg" alt="Producto 5"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho6.jpg" alt="Producto 6"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho7.jpg" alt="Producto 7"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho8.jpg" alt="Producto 8"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho9.jpg" alt="Producto 9"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho10.jpg" alt="Producto 10"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho11.jpg" alt="Producto 11"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+    <div class="producto"><img src="img/poncho12.jpg" alt="Producto 12"><div class="nombre">Nuevo lanzamiento</div><div class="precio">$25.000</div><button class="btn" onclick="agregarAlCarrito('Nuevo lanzamiento - $25.000')">Añadir al carrito</button></div>
+  </div>
+
+  <div id="carrito">
+    <h2>Resumen del carrito</h2>
+    <ul id="lista-carrito"></ul>
+  </div>
+
+  <button id="btn-whatsapp" onclick="enviarPorWhatsApp()">Enviar pedido por WhatsApp</button>
+
+  <script>
+    // Cambia esta variable a la ruta de tu GIF o video (solo uno)
+    const fondoRuta = "img/fondo.gif"; // ejemplo: 'img/fondo-animado.gif' o 'videos/fondo.mp4'
+    const esVideo = false; // Cambia a true si es video
+
+    if (esVideo) {
+      // Mostrar video de fondo
+      const videoFondo = document.getElementById("fondo-video");
+      videoFondo.src = fondoRuta;
+      videoFondo.style.display = "block";
+      document.getElementById("fondo-gif").style.display = "none";
+    } else {
+      // Mostrar gif como fondo
+      const divFondo = document.getElementById("fondo-gif");
+      divFondo.style.backgroundImage = `url('${fondoRuta}')`;
+      divFondo.style.display = "block";
+      document.getElementById("fondo-video").style.display = "none";
+    }
+
+    let carrito = [];
+
+    function agregarAlCarrito(producto) {
+      carrito.push(producto);
+      actualizarResumen();
+      alert(producto + " añadido al carrito.");
+    }
+
+    function eliminarDelCarrito(index) {
+      carrito.splice(index, 1);
+      actualizarResumen();
+    }
+
+    function actualizarResumen() {
+      const lista = document.getElementById("lista-carrito");
+      lista.innerHTML = "";
+
+      carrito.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `${index + 1}. ${item} <button class="eliminar" onclick="eliminarDelCarrito(${index})">🗑️</button>`;
+        lista.appendChild(li);
+      });
+    }
+
+    function enviarPorWhatsApp() {
+      if (carrito.length === 0) {
+        alert("El carrito está vacío.");
+        return;
+      }
+
+      const mensaje = encodeURIComponent("Hola, quiero hacer el siguiente pedido:\n\n" + carrito.join("\n"));
+      const numero = "573018989559";
+      const url = `https://wa.me/${numero}?text=${mensaje}`;
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
